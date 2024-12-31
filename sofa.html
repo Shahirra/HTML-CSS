@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chooseColor(val){
+            alert("you have choosen " + val);
+        }
+        function setColor(newColor){
+            document.body.style.backgroundColor=newColor;
+
+        }
+        function chooseDesign(designId){
+            var pic=document.getElementById("picture");
+            var desc=document.getElementById("picDesc");
+            switch(parseInt(designId)){
+                case 1:desc.value="This is design 1";
+                    pic.src="sofa1.jpg"; break;
+                case 2:desc.value="This is design 2";
+                    pic.src="sofa2.jpg"; break;
+                case 3:desc.value="This is design 3";
+                    pic.src="sofa3.jpg"; break;
+
+            }
+           
+        }
+
+    </script>
+</head>
+<body>
+    <form action="" name="form1">
+        <h3>Choose the color you would like: </h3>
+       <input type="radio" name="color"  value="Red" onclick="chooseColor(value)" onchange="setColor(this.value)">Red <br>
+       <input type="radio" name="color"  value="Blue" onclick="chooseColor(value)" onchange="setColor(this.value)">Blue <br>
+       <input type="radio" name="color"  value="Orange" onclick="chooseColor(value)" onchange="setColor(this.value)">Orange <br>
+       <input type="radio" name="color"  value="Green" onclick="chooseColor(value)" onchange="setColor(this.value)">Green <br> 
+       <br>
+    </form>
+    <form action="" name="form2">
+       <h3>Choose the design you would like:</h3>
+        <input type="button" value="design 1"  id="1" onclick="chooseDesign(id)">
+        <input type="button" value="design 2"  id="2" onclick="chooseDesign(id)">
+        <input type="button" value="design 3"  id="3" onclick="chooseDesign(id)"><br><br>
+       
+    </form>
+
+    <form action="" name="form3">
+        <input type="text" id="picDesc" value="This is design 1" > <br><br>
+        <img src="sofa1.jpg" width="400" height="250" id="picture" >
+        
+    </form>
+    
+</body>
+</html>

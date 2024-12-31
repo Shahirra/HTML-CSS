@@ -1,0 +1,23 @@
+body{
+    background-color:gainsboro
+}
+.d1{
+    border: 2px;
+    border-style: dashed;
+    border-color: darkgreen;
+    background-color: lightgreen;
+    width: 300px;
+}
+.d1 p{
+    margin: 10px;
+}
+.label{
+    background-color: lightgreen;
+    text-align: right;
+}
+
+li{
+    display:inline;
+    list-style: none;
+    
+}
